@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
@@ -19,4 +20,13 @@ public class PlayerMove : MonoBehaviour
         speedy = Input.GetAxis("Vertical") * moveSpeed;
         rb.linearVelocity = new Vector2(speedx, speedy);
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Ennemie"))
+        {
+            Debug.Log("Touché");
+        }
+    }
 }
+
