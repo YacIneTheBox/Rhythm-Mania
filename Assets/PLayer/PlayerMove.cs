@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
+    public int health;
     public float moveSpeed;
     Rigidbody2D rb;
     float speedx, speedy;
